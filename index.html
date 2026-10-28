@@ -2,7 +2,7 @@
 <html lang="de-CH">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" contenth="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Umzug Glanz – Umzug und Umzugsreinigung mit Abnahmegarantie in Luzern</title>
 <meta name="description" content="Umzug, Umzugsreinigung mit Abnahmegarantie, Räumung und Möbelmontage in Luzern und der Zentralschweiz. Festpreis-Offerte innert 24 Stunden. Tel. 078 726 94 44.">
 <link rel="canonical" href="https://umzugglanz.ch/">
@@ -63,7 +63,21 @@ nav a{text-decoration:none;color:var(--hero-muted)}
 nav a:hover{color:var(--hero-fg)}
 .head-cta{display:flex;gap:10px;align-items:center}
 .head-cta .btn{padding:10px 16px;font-size:.92rem}
-@media (max-width:900px){nav{display:none}}
+nav{flex-wrap:wrap;align-items:center}
+nav > a{color:var(--hero-muted);text-decoration:none;padding:6px 0;white-space:nowrap}
+nav > a:hover{color:var(--hero-fg)}
+.dd{position:relative;background:transparent;border:0;border-radius:0;padding:0}
+nav details.dd summary{padding:0 0;margin:0;font-family:var(--body);font-size:inherit;color:var(--hero-muted)}
+.dd > summary{list-style:none;cursor:pointer;color:var(--hero-muted);font-weight:600;display:flex;gap:6px;align-items:center;padding:6px 0}
+.dd > summary::-webkit-details-marker{display:none}
+.dd > summary::after{content:"▾";font-size:.8em}
+.dd-menu{position:absolute;top:100%;left:-12px;z-index:20;margin-top:8px;background:var(--hero-bg);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px;display:grid;min-width:250px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.dd-menu a{color:var(--hero-muted);text-decoration:none;padding:9px 12px;border-radius:8px;font-size:.93rem;font-weight:600}
+.dd-menu a:hover{background:rgba(255,255,255,.07);color:var(--hero-fg)}
+header .wrap{flex-wrap:wrap}
+@media (max-width:1000px){.dd-menu{position:fixed;left:16px;right:16px;top:auto;min-width:0;margin-top:0;max-height:70vh;overflow:auto}}
+@media (max-width:1000px){nav{order:3;width:100%;gap:4px 18px;font-size:.9rem;overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px;border-top:1px solid rgba(255,255,255,.08);padding-top:8px}nav > a,nav .dd{flex:none}header .wrap{padding-block:10px}}
+@media (max-width:560px){.head-cta .btn-primary{padding:9px 13px}}
 @media (max-width:560px){.head-cta .btn-ghost{display:none}}
 
 /* hero */
@@ -177,9 +191,21 @@ footer a{color:var(--hero-muted)}
   <div class="wrap">
     <a class="logo" href="#top">Umzug<span class="spark">✦</span>Glanz</a>
     <nav>
-      <a href="#leistungen">Leistungen</a>
+      <details class="dd">
+        <summary>Leistungen</summary>
+        <div class="dd-menu">
+          <a href="#leistungen">Alle Leistungen</a>
+          <a href="#leistungen">Privatumzug</a>
+          <a href="#leistungen">Firmen- und Büroumzug</a>
+          <a href="#leistungen">Umzugsreinigung</a>
+          <a href="#leistungen">Unterhalts- und Büroreinigung</a>
+          <a href="#leistungen">Räumung und Entsorgung</a>
+          <a href="#leistungen">Möbelmontage und -lieferung</a>
+        </div>
+      </details>
       <a href="#pakete">Pakete</a>
       <a href="#ablauf">Ablauf</a>
+      <a href="#warum">Warum uns</a>
       <a href="#faq">FAQ</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
